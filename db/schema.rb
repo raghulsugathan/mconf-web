@@ -164,6 +164,14 @@ ActiveRecord::Schema.define(:version => 20131004150321) do
     t.text     "other_participation_url"
   end
 
+  create_table "institutions", :force => true do |t|
+    t.string   "name"
+    t.string   "acronym"
+    t.string   "permalink"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "join_requests", :force => true do |t|
     t.string   "request_type"
     t.integer  "candidate_id"
