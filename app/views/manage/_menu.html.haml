@@ -8,6 +8,8 @@
       = link_to t('.spaces'), manage_spaces_path
     %li{ :class => "#{'selected' if params[:controller] == 'manage' && params[:action] == 'users'}" }
       = link_to t('.users'), manage_users_path
+    %li{ :class => "#{'selected' if params[:controller] == 'manage' && params[:action] == 'institutions'}" }
+      = link_to t('.institutions'), manage_institutions_path
     %li{ :class => "#{'selected' if params[:controller] == 'manage' && params[:action] == 'spam'}" }
       = link_to t('.spam'), manage_spam_path
     - webconf_controllers = ['custom_bigbluebutton_servers', 'custom_bigbluebutton_rooms', 'custom_bigbluebutton_recordings']
