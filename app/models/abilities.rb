@@ -141,7 +141,7 @@ module Abilities
       # end
 
       # Institutions
-      can [:read], Institution
+      can [:read, :select], Institution
       can [:update], Institution do |i|
         i.admins.include?(user)
       end
@@ -295,7 +295,7 @@ module Abilities
       can :read, News, :space => { :public => true }
       can :read, Event, :space => { :public => true }
       can :read, Attachment, :space => { :public => true, :repository => true }
-      can [:read], Institution
+      can [:read, :select], Institution
     end
 
     private
