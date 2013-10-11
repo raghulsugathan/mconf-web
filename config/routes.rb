@@ -51,7 +51,9 @@ Mconf::Application.routes.draw do
   match '/secure/info', :to => 'shibboleth#info', :as => "shibboleth_info"
 
   resources :institutions do
-    resources :users, :only => [:index]
+    member do
+      get :user_permissions
+    end
     collection do
       get :select
       get :correct_duplicate
