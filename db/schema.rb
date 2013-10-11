@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131004150321) do
+ActiveRecord::Schema.define(:version => 20131011165211) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -318,14 +318,15 @@ ActiveRecord::Schema.define(:version => 20131004150321) do
     t.string   "name"
     t.integer  "parent_id"
     t.boolean  "deleted"
-    t.boolean  "public",      :default => false
+    t.boolean  "public",         :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
     t.string   "permalink"
-    t.boolean  "disabled",    :default => false
-    t.boolean  "repository",  :default => false
+    t.boolean  "disabled",       :default => false
+    t.boolean  "repository",     :default => false
     t.string   "logo_image"
+    t.integer  "institution_id"
   end
 
   create_table "statistics", :force => true do |t|

@@ -57,6 +57,7 @@ Mconf::Application.routes.draw do
     collection do
       get :select
       get :correct_duplicate
+      get :spaces
     end
   end
 

@@ -697,6 +697,10 @@ en:
       zero: no members
       one: one member
       other: %{count} members
+    space:
+      zero: no spaces
+      one: one space
+      other: %{count} spaces
     users: Users in this institution
     destroy: Delete institution
     duplicate: This institution is a duplicate...
