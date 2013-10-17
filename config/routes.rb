@@ -30,6 +30,7 @@ Mconf::Application.routes.draw do
     get "logout", :to => "sessions#destroy"
     get "register", :to => "registrations#new"
   end
+  get '/users/:id/approve' => 'users#approve', :as => :approve_user
 
   # bigbluebutton_rails default routes
   bigbluebutton_routes :default, :controllers => {

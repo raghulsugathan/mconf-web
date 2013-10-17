@@ -1520,6 +1520,7 @@ en:
     add_more: "Add users >>"
     admin: Admin
     administrators: Administrators
+    approved: "%{username} was approved to use the website"
     assist: Attending
     by_email: "By email"
     by_private_message: "By private message"

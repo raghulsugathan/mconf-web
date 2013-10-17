@@ -20,6 +20,7 @@ FactoryGirl.define do
     u.updated_at { Time.now }
     u.confirmed_at { Time.now }
     u.disabled false
+    u.approved true
     u.superuser false
     u.receive_digest { User::RECEIVE_DIGEST_NEVER }
     u.password { Forgery::Basic.password :at_least => 6, :at_most => 16 }
