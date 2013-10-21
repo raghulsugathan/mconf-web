@@ -142,7 +142,7 @@ module Abilities
 
       # Institutions
       can [:read, :select], Institution
-      can [:update], Institution do |i|
+      can [:edit, :update, :user_permissions], Institution do |i|
         i.admins.include?(user)
       end
 
@@ -154,6 +154,8 @@ module Abilities
           admins = perm.subject.admins
         when "Event"
           admins = perm.subject.space.admins
+        when "Institution"
+          admins = perm.subject.admins
         else
           admins = []
         end
